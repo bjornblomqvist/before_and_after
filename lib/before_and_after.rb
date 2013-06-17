@@ -8,7 +8,7 @@ module BeforeAndAfter
   #    Time.now.before?(2.hours.from_now)
   #
   def before?(input_time)
-    (self <=> input_time) == RIGHT_SIDE_LATER
+    (self <=> input_time) == -1
   end
   
   # * +input_time+ - time to compare
@@ -16,7 +16,7 @@ module BeforeAndAfter
   #    Time.now.after?(2.hours.ago)
   #
   def after?(input_time)
-    (self <=> input_time) == LEFT_SIDE_LATER
+    (self <=> input_time) == 1
   end
   
   # * +time_span+ - time span in seconds

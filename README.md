@@ -1,6 +1,6 @@
 # before_and_after
 
-Before_and_after is simple gem adding some nice utility methods to Time.
+befoce_and_after adds the methods (before?, after?, within_last?, within_comming?) to Time
 
   2.minutes.ago.after?(Time.now) # => false
   
@@ -9,6 +9,8 @@ Before_and_after is simple gem adding some nice utility methods to Time.
   2.minutes.ago.within_last?(2.hours) # => true
   
   2.minutes.from_now.within_coming?(2.hours) # => true
+  
+Credits goes to whoever wrote this. http://www.dzone.com/snippets/and-after-ruby-time-class
 
 ## Contributing to before_and_after
  
