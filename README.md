@@ -1,6 +1,6 @@
 # before_and_after
 
-befoce_and_after adds the methods (before?, after?, within_last?, within_comming?) to Time
+befoce_and_after adds the methods (before?, after?, within_last?, within_coming?) to Time
 
   2.minutes.ago.after?(Time.now) # => false
   

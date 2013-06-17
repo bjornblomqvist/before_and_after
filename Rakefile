@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "before_and_after"
   gem.homepage = "http://github.com/bjornblomqvist/before_and_after"
   gem.license = "MIT"
-  gem.summary = %Q{It adds the methods (before?, after?, within_last?, within_comming?) to Time }
-  gem.description = %Q{It adds the methods (before?, after?, within_last?, within_comming?) to Time }
+  gem.summary = %Q{It adds the methods (before?, after?, within_last?, within_coming?) to Time }
+  gem.description = %Q{It adds the methods (before?, after?, within_last?, within_coming?) to Time }
   gem.email = "darwin.git@marianna.se"
   gem.authors = ["Darwin"]
   # dependencies defined in Gemfile
