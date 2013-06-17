@@ -2,13 +2,13 @@
 
 befoce_and_after adds the methods (before?, after?, within_last?, within_coming?) to Time
 
-  2.minutes.ago.after?(Time.now) # => false
+    2.minutes.ago.after?(Time.now) # => false
   
-  Time.now.before?(2.hours.from_now) # => true
+    Time.now.before?(2.hours.from_now) # => true
   
-  2.minutes.ago.within_last?(2.hours) # => true
+    2.minutes.ago.within_last?(2.hours) # => true
   
-  2.minutes.from_now.within_coming?(2.hours) # => true
+    2.minutes.from_now.within_coming?(2.hours) # => true
   
 Credits goes to whoever wrote this. http://www.dzone.com/snippets/and-after-ruby-time-class
 
