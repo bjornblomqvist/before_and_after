@@ -24,7 +24,8 @@ module BeforeAndAfter
   #    2.minutes.ago.within_last?(2.hours)
   #
   def within_last?(time_span)
-    self.between?(Time.now - time_span, Time.now)
+    now = Time.now
+    self.between?(now - time_span, now)
   end
 
   # * +time_span+ - time span in seconds
@@ -32,7 +33,8 @@ module BeforeAndAfter
   #    2.minutes.from_now.within_coming?(2.hours)
   #
   def within_coming?(time_span)
-    self.between?(Time.now, Time.now +  time_span)
+    now = Time.now
+    self.between?(now, now +  time_span)
   end
 
 end
