@@ -8,7 +8,7 @@ module BeforeAndAfter
   #    Time.now.before?(2.hours.from_now)
   #
   def before?(input_time)
-    (self <=> input_time) == -1
+    (self.utc <=> input_time.utc) == -1
   end
   
   # * +input_time+ - time to compare
@@ -16,7 +16,7 @@ module BeforeAndAfter
   #    Time.now.after?(2.hours.ago)
   #
   def after?(input_time)
-    (self <=> input_time) == 1
+    (self.utc <=> input_time.utc) == 1
   end
   
   # * +time_span+ - time span in seconds
@@ -24,8 +24,8 @@ module BeforeAndAfter
   #    2.minutes.ago.within_last?(2.hours)
   #
   def within_last?(time_span)
-    now = Time.now
-    self.between?(now - time_span, now)
+    now = Time.now.utc
+    self.utc.between?(now - time_span, now)
   end
 
   # * +time_span+ - time span in seconds
@@ -33,8 +33,8 @@ module BeforeAndAfter
   #    2.minutes.from_now.within_coming?(2.hours)
   #
   def within_coming?(time_span)
-    now = Time.now
-    self.between?(now, now +  time_span)
+    now = Time.now.utc
+    self.utc.between?(now, now +  time_span)
   end
 
 end
