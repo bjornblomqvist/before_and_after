@@ -25,6 +25,7 @@ module BeforeAndAfter
   #
   def within_last?(time_span)
     now = Time.now.utc
+    puts "#{self.utc} #{now}"
     self.utc.between?(now - time_span, now)
   end
 
@@ -34,9 +35,14 @@ module BeforeAndAfter
   #
   def within_coming?(time_span)
     now = Time.now.utc
+    puts "#{self.utc} #{now}"
     self.utc.between?(now, now +  time_span)
   end
-
 end
 
 Time.send :include , BeforeAndAfter
+
+begin
+  ActiveSupport::TimeWithZone.send :include , BeforeAndAfter
+rescue => e
+end
