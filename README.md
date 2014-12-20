@@ -22,6 +22,10 @@ Credits goes to whoever wrote this. http://www.dzone.com/snippets/and-after-ruby
 
 ## Changelog
 
+**1.0.2**
+
+- Fixed problem with ActiveSupport::TimeWithZone between not behaving the same as Time#between
+
 **1.0.1**
 
 - Fixed so that we always use the same time NOW
