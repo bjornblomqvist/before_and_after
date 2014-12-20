@@ -22,6 +22,10 @@ Credits goes to whoever wrote this. http://www.dzone.com/snippets/and-after-ruby
 
 ## Changelog
 
+**1.0.4**
+
+- Removing puts used during testing
+
 **1.0.3**
 
 - Yet another try to get ActiveSupport::TimeWithZone to work with before_and_after
